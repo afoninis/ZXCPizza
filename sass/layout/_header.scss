@@ -120,17 +120,18 @@
   }
 
   &__profile {
-    position: absolute;
-    top: 0;
-    right: 0;
+    display: grid;
+    justify-items: end;
+    align-items: center;
     transition: all 0.3s;
-    z-index: 60;
+    z-index: 65;
 
     &-burger {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      transform: translate(50%, -300%);
+      margin-top: 0.5rem;
+      // position: fixed;
+      // left: 0;
+      // bottom: 10vh;
+      // transform: translate(50%, -300%);
 
       &-burger--icon {
         width: 5rem;
@@ -142,6 +143,7 @@
     // }
 
     &--icon {
+      z-index: 65;
       @media only screen and (max-width: 800px) {
         width: 5rem;
         margin-top: -1.7vh;
@@ -235,6 +237,7 @@
 
   &__menu {
     grid-area: menu;
+    display: grid;
     position: absolute;
     top: 0;
     right: 0;
@@ -245,10 +248,12 @@
     box-shadow: 0 0 2rem $color-orange;
 
     &-box {
-      position: relative;
       grid-area: profile;
-      justify-self: end;
-      width: 10rem;
+      position: relative;
+      z-index: 55;
+      // justify-self: end;
+      // width: 10rem;
+      // height: 6rem;
     }
 
     & > * {

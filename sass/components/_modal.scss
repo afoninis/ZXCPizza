@@ -96,12 +96,16 @@
       margin-bottom: 2rem;
     }
     &-items {
-      height: 45%;
+      height: 50vh;
       display: flex;
       flex-direction: column;
       gap: 2rem;
       overflow-y: scroll;
       @include customSlider;
+
+      @media only screen and (max-width: 800px) {
+        height: 70vh;
+      }
 
       @media only screen and (max-width: 500px) {
         height: 42vh;
