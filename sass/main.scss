@@ -1,0 +1,22 @@
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+@import "./base/animations";
+@import "./base/base";
+@import "./base/typography";
+@import "./base/utilities";
+@import "./base/responsive";
+
+@import "./components/button";
+@import "./components/slider";
+@import "./components/cards";
+@import "./components/modal";
+@import "./components/overlay";
+@import "./components/additions";
+@import "./components/burger";
+
+@import "./layout/header";
+
+@import "./pages/home";
+@import "./pages/work";

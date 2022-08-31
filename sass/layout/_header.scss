@@ -1,0 +1,294 @@
+.header {
+  background-color: $color-black-darker;
+  padding: 3rem 0;
+  font-size: 1.5rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+
+  &__content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-row-gap: 3rem;
+    position: relative;
+    grid-column-gap: 1.2rem;
+
+    grid-template-areas:
+      "main main profile"
+      "nav nav btn";
+
+    @media only screen and (max-width: 1000px) {
+      grid-template-areas:
+        "main main profile"
+        "menu nav btn";
+    }
+    @media only screen and (max-width: 800px) {
+      grid-template-areas:
+        "main main main main"
+        "menu nav btn profile";
+    }
+    // @media only screen and (max-width: 800px) {
+    //   grid-template-areas:
+    //     "main main profile"
+    //     "menu nav btn";
+    // }
+    &-burger {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "main main main profile"
+        "menu nav nav nav"
+        "btn btn btn btn" !important;
+
+      @media only screen and (max-width: 840px) {
+        grid-template-areas:
+          "main main main main"
+          "menu profile nav nav"
+          "btn btn btn btn" !important;
+      }
+    }
+  }
+  &__info {
+    grid-area: main;
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "logo del call";
+    grid-column-gap: 1.2rem;
+
+    @media only screen and (max-width: 700px) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "logo logo"
+        "del call";
+      grid-row-gap: 2rem;
+      grid-column-gap: 4rem;
+      justify-self: center;
+    }
+    @media only screen and (max-width: 500px) {
+      font-size: 2.5rem;
+    }
+  }
+  &__logo-box {
+    grid-area: logo;
+    justify-self: start;
+    z-index: 24;
+    figcaption {
+      letter-spacing: 3px;
+    }
+
+    @media only screen and (max-width: 800px) {
+      justify-self: start !important;
+    }
+  }
+  &__delivery {
+    grid-area: del;
+    z-index: 24;
+    font-size: 1.6rem;
+
+    @media only screen and (max-width: 800px) {
+      justify-self: end !important;
+    }
+    @media only screen and (max-width: 440px) {
+      font-size: 1.8rem;
+    }
+    @media only screen and (max-width: 370px) {
+      font-size: 1.5rem;
+    }
+    &--imp {
+      color: $color-orange;
+      font-weight: 500;
+    }
+  }
+
+  &__call {
+    grid-area: call;
+    z-index: 24;
+    @media only screen and (max-width: 800px) {
+      justify-self: end !important;
+    }
+    @media only screen and (max-width: 500px) {
+      font-size: 1.8rem !important;
+    }
+    @media only screen and (max-width: 440px) {
+      font-size: 1.8rem;
+    }
+    &--text-info {
+      color: rgba($color-white-full, 0.5);
+    }
+  }
+
+  &__profile {
+    grid-area: profile;
+    justify-self: end;
+    transition: all 0.3s;
+    z-index: 26;
+
+    &--icon {
+      @media only screen and (max-width: 800px) {
+        width: 5rem;
+        margin-top: -1.7vh;
+
+        &-burger {
+          margin-bottom: -2.3rem;
+          width: 4rem;
+        }
+      }
+      // filter: invert(95%) sepia(0%) saturate(20%) hue-rotate(336deg)
+      //   brightness(105%) contrast(105%);
+      // transition: all 0.3s;
+    }
+
+    &:active &--icon {
+      transform: scale(0.9);
+    }
+
+    &:hover &--icon {
+      filter: brightness(0) saturate(100%) invert(59%) sepia(89%)
+        saturate(1315%) hue-rotate(333deg) brightness(107%) contrast(101%);
+    }
+  }
+  &__btn {
+    grid-area: btn;
+    z-index: 50;
+
+    &--inner {
+      z-index: 50;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      font-size: 1.8rem;
+    }
+
+    &-burger {
+      position: absolute;
+      bottom: -12vh;
+      right: 0;
+    }
+  }
+  &__nav {
+    grid-area: nav;
+    list-style-type: none;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 33;
+
+    & > * {
+      z-index: 50;
+    }
+
+    &-burger {
+      display: grid;
+      width: 50vw;
+      justify-content: end;
+      justify-items: center;
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-gap: 1rem;
+      align-self: end;
+      font-size: 2rem;
+
+      .header__link {
+        display: inline-block;
+      }
+    }
+  }
+  &__item {
+    // transition: all 0.3s;
+    // &:hover {
+    //   transform: translateY(-1px);
+    // }
+  }
+  &__item:hover &__link {
+    color: $color-orange;
+  }
+  &__link {
+    text-decoration: none;
+    color: $color-white-full;
+    transition: all 0.3s;
+  }
+
+  &__menu {
+    grid-area: menu;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    border-radius: $border-radius;
+    overflow: hidden;
+    z-index: 55;
+
+    & > * {
+      padding: 1.8rem 2rem;
+    }
+
+    &-greeting-box {
+      background-color: $color-black-darker-4;
+      font-size: 1.8rem;
+      padding: 2rem 3rem;
+    }
+    &--greeting {
+      color: $color-white-full;
+    }
+    &--name {
+      color: $color-orange;
+    }
+    &-content {
+      background-color: $color-black-darker-1;
+    }
+    &-list {
+      list-style-type: none;
+      margin-bottom: 2rem;
+      display: grid;
+      grid-row-gap: 0.5rem;
+    }
+    &-item {
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      transition: all 0.3s;
+      border-radius: $border-radius;
+      // padding: 0.8rem 0;
+      &:hover {
+        background-color: $color-orange;
+      }
+    }
+    &-item:hover &--link {
+      color: $color-black-darker-1;
+    }
+    &-item:hover &--arrow {
+      transform: rotate(90deg);
+    }
+    &--link {
+      text-decoration: none;
+      display: flex;
+      justify-content: space-between;
+      color: $color-gray-lighter-3;
+      transition: all 0.3s;
+    }
+    &--arrow {
+      display: inline-block;
+      transition: all 0.3s;
+      margin-left: 2rem;
+    }
+    &-options {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 1rem;
+      &--city {
+      }
+      &--opt {
+        justify-self: end;
+        color: $color-orange;
+        cursor: pointer;
+      }
+      &--arrow {
+        display: inline-block;
+        transform: rotate(90deg);
+        margin-left: 0.5rem;
+        color: $color-white-full;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

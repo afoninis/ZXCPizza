@@ -1,0 +1,326 @@
+.section__slider {
+  position: relative;
+  height: 12vw;
+  margin-top: 5rem;
+  // margin-bottom: 5rem;
+}
+.section__latest {
+  display: grid;
+
+  &-menu {
+    padding-top: 25vh;
+
+    @media only screen and (max-width: 900px) {
+      font-size: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    margin-top: 10rem;
+  }
+  @media only screen and (max-width: 600px) {
+    margin-top: 13rem;
+  }
+  @media only screen and (max-width: 440px) {
+    margin-top: 15rem;
+  }
+
+  .latest {
+    &__submenu {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 2.5rem;
+
+      &--item {
+      }
+      &--link {
+        text-decoration: none;
+        color: $color-gray-darker-6;
+        transition: all 0.3s;
+
+        &-active {
+          color: $color-white-full;
+        }
+        &:hover {
+          color: $color-orange;
+        }
+      }
+    }
+    &__input {
+      width: 100%;
+      // margin-bottom: 5rem;
+      background-color: $color-black-darker;
+      border: none;
+      outline: none;
+      padding: 1.5rem;
+      border-radius: $border-radius;
+      font-size: inherit;
+      font-family: inherit;
+      color: currentColor;
+      transition: all 0.3s;
+      margin-bottom: 5rem;
+
+      &:focus {
+        color: $color-orange;
+      }
+      &-box {
+        position: relative;
+      }
+      &--icon {
+        position: absolute;
+        right: 2rem;
+        top: 1rem;
+        width: 2.5rem;
+        pointer-events: none;
+      }
+
+      &::placeholder {
+        color: $color-gray-darker-4;
+      }
+      &:hover {
+        box-shadow: 0 0 1rem currentColor;
+      }
+      &:focus {
+        box-shadow: 0 0 1rem $color-orange;
+      }
+    }
+    &__nav {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      list-style-type: none;
+    }
+    &__filters {
+      justify-self: end;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      &--link {
+      }
+      &--icon {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+}
+.section__locations {
+  text-align: center;
+}
+// margin-bottom: 5rem;
+
+.locations {
+  &__left,
+  &__right {
+    height: 25vw;
+
+    @media only screen and (max-width: 1400px) {
+      height: 35vw;
+    }
+    @media only screen and (max-width: 560px) {
+      height: 50vw;
+    }
+    @media only screen and (max-width: 440px) {
+      height: 65vw;
+    }
+  }
+  &__left {
+    padding-right: 1rem;
+    overflow-y: scroll;
+    @include customSlider;
+
+    display: grid;
+    grid-row-gap: 2.5rem;
+  }
+  &__content {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 2rem;
+
+    @media only screen and (max-width: 1400px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media only screen and (max-width: 560px) {
+      width: 80%;
+      grid-template-columns: 1fr;
+    }
+    @media only screen and (max-width: 440px) {
+      width: 90%;
+    }
+  }
+  &__right {
+    border-radius: $border-radius;
+    background-image: url("../../img/locations/map.jpg");
+  }
+  &__item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 2rem;
+    background-color: $color-black-darker;
+    padding: 3rem;
+    border-radius: $border-radius;
+
+    & > *:nth-child(odd) {
+      justify-self: start;
+    }
+    & > *:nth-child(even) {
+      justify-self: end;
+    }
+  }
+  &__name,
+  &__time {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  &__address,
+  &__rating--text {
+    font-size: 1.6rem;
+    color: $color-gray-darker-1;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+
+    &--text {
+      margin-left: 0.5rem;
+    }
+  }
+  &__star-full {
+    width: 2rem;
+  }
+  &__star-half {
+    width: 2rem;
+  }
+  &__star-empty {
+    width: 2rem;
+  }
+}
+// }
+.section__about {
+  // margin-bottom: 5rem;
+
+  .about {
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2rem;
+      list-style-type: none;
+
+      @media only screen and (max-width: 900px) {
+        line-height: 1.4;
+        font-size: 1.7rem;
+      }
+      @media only screen and (max-width: 800px) {
+        width: 94%;
+        margin: 0 auto;
+        line-height: 1.5;
+        font-size: 1.7rem;
+      }
+      @media only screen and (max-width: 700px) {
+        width: 65%;
+        grid-row-gap: 1rem;
+        grid-template-columns: 1fr;
+      }
+      @media only screen and (max-width: 600px) {
+        width: 85%;
+      }
+    }
+    &__item {
+      display: grid;
+      &:nth-child(1),
+      &:nth-child(4) {
+        padding: 4rem 0;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: $border-radius;
+      }
+      @media only screen and (max-width: 900px) {
+        &:nth-child(1),
+        &:nth-child(4) {
+          padding: 0 2rem;
+          background: none;
+        }
+      }
+      @media only screen and (max-width: 700px) {
+        &:nth-child(1),
+        &:nth-child(4) {
+          padding: 2rem 0 0;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+          height: 40vh;
+        }
+      }
+      &:nth-child(1) {
+        @media only screen and (max-width: 700px) {
+          order: 2;
+        }
+      }
+      &:nth-child(2) {
+        background-image: url("../../img/about/about-1.jpg");
+        @media only screen and (max-width: 700px) {
+          order: 1;
+        }
+      }
+      &:nth-child(3) {
+        background-image: url("../../img/about/about-2.jpg");
+        @media only screen and (max-width: 700px) {
+          order: 3;
+        }
+      }
+      &:nth-child(4) {
+        @media only screen and (max-width: 700px) {
+          order: 4;
+        }
+      }
+    }
+
+    &__heading {
+      justify-self: center;
+      font-size: 3.6rem;
+      margin-bottom: 2.5rem;
+      @media only screen and (max-width: 900px) {
+        margin-bottom: 4rem;
+      }
+      @media only screen and (max-width: 700px) {
+        margin-bottom: 1rem;
+      }
+    }
+    &__text {
+      color: $color-gray-darker-2;
+
+      @media only screen and (max-width: 700px) {
+        line-height: 1.6;
+        &:last-child {
+          margin-bottom: 1rem;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem;
+      margin-top: 2.5rem;
+
+      &--link {
+        width: 5rem;
+      }
+      &--img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.additions {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  width: 60%;
+  z-index: 21;
+  background-color: $color-black-main;
+  box-shadow: 0 0 2rem $color-orange;
+  border-radius: $border-radius;
+  font-size: 2rem;
+
+  display: grid;
+  grid-row-gap: 4rem;
+  justify-items: center;
+  padding: 4rem;
+
+  &-items {
+    list-style-type: none;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+  }
+  &-item {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    padding: 2rem;
+    background-color: $color-black-darker;
+    border-radius: $border-radius;
+
+    &--heading {
+    }
+    &--img {
+      width: 80%;
+    }
+    &-controls {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      &--opt {
+        background: none;
+        outline: none;
+        border: none;
+        font-size: inherit;
+        font-family: inherit;
+        color: inherit;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+          transform: scale(1.4);
+        }
+        &:active {
+          color: $color-orange;
+          transform: scale(1.2);
+        }
+      }
+      &--minus {
+      }
+      &--counter {
+        color: $color-orange;
+      }
+      &--plus {
+      }
+    }
+  }
+  &__btn {
+    &--inner {
+    }
+  }
+}

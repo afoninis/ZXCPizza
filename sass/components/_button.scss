@@ -1,0 +1,20 @@
+.btn {
+  transition: all 0.3s;
+  text-transform: lowercase;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  &--inner {
+    border: 1px solid currentColor;
+    border-radius: $border-radius;
+    padding: 1rem 3rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    color: $color-orange;
+  }
+}
+.btn:hover .btn--inner {
+  color: $color-black-main;
+  background-color: $color-orange;
+}

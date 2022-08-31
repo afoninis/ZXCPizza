@@ -1,0 +1,142 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5rem 3rem;
+
+  @media only screen and (max-width: 800px) {
+    margin: 0 auto;
+    width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5rem;
+    font-size: 2.2rem;
+  }
+  @media only screen and (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
+}
+.card {
+  background-color: $color-black-darker;
+  padding: 3rem 1.5rem;
+  border-radius: $border-radius;
+  text-align: center;
+
+  @media only screen and (max-width: 800px) {
+    padding: 4rem;
+  }
+  @media only screen and (max-width: 560px) {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  // & &__img:hover {
+  //   background-image: none;
+  // }
+  &__heading {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+
+    @media only screen and (max-width: 800px) {
+      font-size: 2.5rem;
+    }
+    @media only screen and (max-width: 560px) {
+      font-size: 2.8rem;
+    }
+  }
+  &__img-box {
+    position: relative;
+    width: 100%;
+    height: 14vw;
+    display: grid;
+    align-items: center;
+
+    @media only screen and (max-width: 800px) {
+      height: 24vw;
+    }
+    @media only screen and (max-width: 560px) {
+      height: 40vw;
+    }
+  }
+  &__img {
+    justify-self: center;
+    width: 90%;
+    // height: 100%;
+    position: absolute;
+    object-fit: cover;
+    transition: all 0.3s;
+
+    display: grid;
+
+    @media only screen and (max-width: 800px) {
+      width: 100%;
+    }
+    @media only screen and (max-width: 560px) {
+      width: 80%;
+    }
+  }
+  &__img-box:hover &__img {
+    opacity: 0;
+  }
+  &__img-box:hover &__info {
+    opacity: 1;
+  }
+
+  &__info {
+    display: grid;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  &__description {
+    // justify-self: start;
+    align-self: end;
+    margin-bottom: 3rem;
+    color: $color-gray;
+  }
+  &__weight {
+    justify-self: end;
+    color: $color-gray-lighter-1;
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__price {
+    font-size: 2.2rem;
+    font-weight: 500;
+
+    @media only screen and (max-width: 560px) {
+      font-size: 2.5rem;
+    }
+  }
+  &__imp {
+    color: $color-orange;
+  }
+  &__btn {
+    width: 3rem;
+    height: 3rem;
+    background-color: $color-orange;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: $color-black-darker;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+
+    @media only screen and (max-width: 560px) {
+      font-size: 2.5rem;
+    }
+
+    &:active {
+      background-color: $color-orange-darker-1;
+      transform: scale(1.05);
+    }
+  }
+}

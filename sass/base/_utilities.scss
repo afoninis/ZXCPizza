@@ -1,0 +1,37 @@
+.u-container {
+  max-width: 120rem;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 1200px) {
+    max-width: 100rem;
+  }
+  @media only screen and (max-width: 1000px) {
+    max-width: 110rem;
+  }
+  @media only screen and (max-width: 900px) {
+    max-width: 90%;
+  }
+  @media only screen and (max-width: 800px) {
+    max-width: 96%;
+  }
+}
+.u-container-slider {
+  max-width: 120rem;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 1200px) {
+    max-width: 100rem;
+  }
+  @media only screen and (max-width: 800px) {
+    width: 70%;
+  }
+}
+.u-margin-bottom-sm {
+  margin-bottom: 0.5rem;
+}
+.u-text-left {
+  justify-self: left;
+}
+.u-text-imp {
+  color: $color-orange !important;
+}

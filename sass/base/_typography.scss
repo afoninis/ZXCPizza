@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+  color: $color-white-full;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+}
+.heading-second {
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 5rem 0;
+
+  @media only screen and (max-width: 800px) {
+    margin: 10rem 0 5rem;
+  }
+}

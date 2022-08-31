@@ -1,0 +1,9 @@
+@mixin customSlider {
+  &::-webkit-scrollbar {
+    background: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: $border-radius;
+    background-color: $color-orange;
+  }
+}

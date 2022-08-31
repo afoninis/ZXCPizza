@@ -1,0 +1,249 @@
+.arrow-back {
+  &-box {
+    position: fixed;
+    top: 5rem;
+    left: 5rem;
+
+    z-index: 111;
+    cursor: pointer;
+  }
+}
+.section__hero {
+  height: 100vh;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+  .hero {
+    &__content {
+      height: 50%;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+    }
+    &__logo-box {
+      display: grid;
+      justify-items: center;
+
+      figcaption {
+        font-size: 2.4rem;
+        letter-spacing: 1rem;
+        text-align: center;
+
+        @media only screen and (max-width: 700px) {
+          letter-spacing: 0.4rem;
+          font-size: 2rem;
+        }
+      }
+    }
+    &__logo {
+      margin-bottom: 2rem;
+      width: 90%;
+    }
+    &__question {
+      color: $color-gray-darker-3;
+
+      @media only screen and (max-width: 1100px) {
+        font-size: 2.5rem;
+      }
+    }
+    &__btn {
+      &--inner {
+        font-size: 2rem;
+
+        @media only screen and (max-width: 1100px) {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+.section__looking-for {
+  text-align: center;
+  margin-bottom: 34rem;
+
+  .looking-for {
+    &__heading-main {
+      font-size: 4.8rem;
+      margin-bottom: 4vw;
+
+      @media only screen and (max-width: 700px) {
+        font-size: 3.8rem;
+      }
+    }
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 5vw;
+      list-style-type: none;
+
+      @media only screen and (max-width: 600px) {
+        grid-gap: 2vw;
+      }
+    }
+    &__item {
+      &--img {
+        height: 6vw;
+      }
+      &--heading {
+        font-size: 3.2rem;
+        margin: 1rem 0 2rem;
+        color: $color-orange;
+
+        @media only screen and (max-width: 500px) {
+          font-size: 2.5rem;
+        }
+      }
+      &--description {
+        color: $color-gray-darker-3;
+        font-size: 2rem;
+        @media only screen and (max-width: 500px) {
+          line-height: 1.4;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+.section__cta {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-gap: 8rem;
+  margin-bottom: 13rem;
+  @media only screen and (max-width: 1000px) {
+    font-size: 2rem;
+    grid-gap: 2rem;
+  }
+
+  @media only screen and (max-width: 700px) {
+    justify-items: center;
+    grid-template-columns: 1fr;
+  }
+  .cta {
+    &__heading {
+      margin-bottom: 7.5rem;
+    }
+    &__content {
+      text-align: center;
+      @media only screen and (max-width: 700px) {
+        display: grid;
+        justify-items: center;
+      }
+      input {
+        background-color: $color-black-darker-1;
+        border: none;
+        outline: none;
+        font-family: inherit;
+        padding: 2rem;
+        border-radius: $border-radius;
+        font-size: inherit;
+        color: inherit;
+        transition: all 0.3s;
+        &:hover {
+          box-shadow: 0 0 1rem currentColor;
+        }
+        &:focus {
+          box-shadow: 0 0 1rem $color-orange;
+        }
+        &::placeholder {
+          color: $color-gray-darker-4;
+        }
+      }
+    }
+    &__form {
+      width: 80%;
+      display: grid;
+      grid-gap: 2.5rem;
+
+      input {
+        &:focus {
+          color: $color-orange;
+        }
+      }
+
+      &-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 2.5rem;
+        grid-column-gap: 5rem;
+
+        @media only screen and (max-width: 700px) {
+          grid-template-columns: 1fr;
+        }
+      }
+      &-checkbox-box {
+        position: relative;
+        display: grid;
+        text-align: left;
+      }
+      &--checkbox {
+        display: none;
+      }
+      &--checkbox:checked + label::before {
+        background-color: $color-orange;
+        border: 1px solid $color-orange;
+      }
+      &--label {
+        color: $color-gray-darker-4;
+        position: relative;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          border: 1px solid $color-gray-darker-3;
+          border-radius: 5px;
+          width: 2rem;
+          height: 2rem;
+          vertical-align: middle;
+          margin-right: 1.5rem;
+          transition: all 0.3s;
+        }
+      }
+
+      &--imp {
+        color: $color-white-full;
+      }
+      &--btn {
+        justify-self: center;
+        width: 90%;
+        color: $color-orange;
+        background: none;
+        outline: none;
+        border: 3px solid $color-orange;
+        border-radius: $border-radius;
+        font-family: inherit;
+        padding: 1.5rem 0;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $color-orange;
+          color: $color-black-main;
+          transform: scale(1.05);
+        }
+        &:active {
+          transform: scale(1.1);
+        }
+      }
+    }
+    &__img-box {
+      background-image: url("../../img/work/cta-1.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: $border-radius;
+
+      @media only screen and (max-width: 700px) {
+        display: none;
+      }
+    }
+    &__heading {
+      font-size: 3.6rem;
+
+      @media only screen and (max-width: 700px) {
+        font-size: 3.8rem;
+      }
+    }
+  }
+}
