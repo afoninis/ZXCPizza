@@ -183,7 +183,8 @@ document.body.addEventListener("click", (e) => {
       e.x < wndOffsets?.right &&
       e.y > wndOffsets?.top &&
       e.y < wndOffsets?.bottom
-    )
+    ) &&
+    e.target !== btnMenuIcon
   )
     hideMenu();
 });
@@ -212,6 +213,7 @@ const showHeaderNav = () => {
   listNav.classList.add("header__nav-burger");
   btnCard.classList.add("header__btn-burger");
   bHeaderContent.classList.add("header__content-burger");
+  btnMenu.classList.add("header__profile-burger");
   btnMenuIcon.classList.add("header__profile--icon-burger");
 };
 const hideHeaderNav = () => {
@@ -219,6 +221,7 @@ const hideHeaderNav = () => {
   listNav.classList.remove("header__nav-burger");
   btnCard.classList.remove("header__btn-burger");
   bHeaderContent.classList.remove("header__content-burger");
+  btnMenu.classList.remove("header__profile-burger");
   btnMenuIcon.classList.remove("header__profile--icon-burger");
 };
 
