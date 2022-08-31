@@ -39,9 +39,51 @@
           <div class="header__call--text-info">Звонок бесплатный</div>
         </div>
       </div>
-      <a href="#" class="header__profile">
-        <img src="../img/icons/profile.svg" alt="Profile Icon" class="header__profile--icon" />
-      </a>
+      <div class="header__menu-box">
+        <a href="#" class="header__profile">
+          <img src="../img/icons/profile.svg" alt="Profile Icon" class="header__profile--icon" />
+        </a>
+        <div class="header__menu hidden">
+          <div class="header__menu-greeting-box">
+            <p class="header__menu--greeting">Привет,</p>
+            <p class="header__menu--name">Абдурахман</p>
+          </div>
+          <div class="header__menu-content">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="#" class="header__menu--link">
+                  <span class="header__menu--text">Заказы</span>
+                  <span class="header__menu--arrow">></span>
+                </a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu--link">
+                  <span class="header__menu--text">Любимое</span>
+                  <span class="header__menu--arrow">></span>
+                </a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu--link">
+                  <span class="header__menu--text">Адреса доставки</span>
+                  <span class="header__menu--arrow">></span>
+                </a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu--link">
+                  <span class="header__menu--text">Настройки доставки</span>
+                  <span class="header__menu--arrow">></span>
+                </a>
+              </li>
+            </ul>
+            <div class="header__menu-options">
+              <p class="header__menu-options--city">Город:</p>
+              <p class="header__menu-options--opt">Москва <span class="header__menu-options--arrow">></span></p>
+              <p class="header__menu-options--city">Язык:</p>
+              <p class="header__menu-options--opt">Русский <span class="header__menu-options--arrow">></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="burger__full">
         <div class="burger-box">
           <span class="burger"></span>
@@ -52,10 +94,10 @@
       </div>
       <ul class="header__nav">
         <li class="header__item">
-          <a href="../index.html" class="header__link">Главная</a>
+          <a href="../index.html" class="header__link u-text-imp">Главная</a>
         </li>
         <li class="header__item">
-          <a href="./menu.html" class="header__link u-text-imp">Меню</a>
+          <a href="./menu.html" class="header__link">Меню</a>
         </li>
         <li class="header__item">
           <a href="#" class="header__link">Заведения</a>
@@ -69,34 +111,6 @@
       </ul>
       <div class="btn header__btn">
         <a href="#" class="btn--inner header__btn--inner">Корзина</a>
-      </div>
-      <div class="header__menu hidden">
-        <div class="header__menu-greeting-box">
-          <p class="header__menu--greeting">Привет,</p>
-          <p class="header__menu--name">Абдурахман</p>
-        </div>
-        <div class="header__menu-content">
-          <ul class="header__menu-list">
-            <li class="header__menu-item">
-              <a href="#" class="header__menu--link">Заказы <span class="header__menu--arrow">></span></a>
-            </li>
-            <li class="header__menu-item">
-              <a href="#" class="header__menu--link">Любимое <span class="header__menu--arrow">></span></a>
-            </li>
-            <li class="header__menu-item">
-              <a href="#" class="header__menu--link">Адреса доставки <span class="header__menu--arrow">></span></a>
-            </li>
-            <li class="header__menu-item">
-              <a href="#" class="header__menu--link">Настройки доставки <span class="header__menu--arrow">></span></a>
-            </li>
-          </ul>
-          <div class="header__menu-options">
-            <p class="header__menu-options--city">Город:</p>
-            <p class="header__menu-options--opt">Москва <span class="header__menu-options--arrow">></span></p>
-            <p class="header__menu-options--city">Язык:</p>
-            <p class="header__menu-options--opt">Русский <span class="header__menu-options--arrow">></span></p>
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -261,7 +275,85 @@
     </div>
   </section>
 
-
+  <div class="additions hidden">
+    <ul class="additions-items">
+      <li class="additions-item">
+        <h5 class="additions-item--heading">Васаби</h5>
+        <img class="additions-item--img" src="../img/additions/additions-1.png" alt="Addition 1">
+        <div class="additions-item-controls">
+          <button class="additions-item-controls--minus additions-item-controls--opt">-</button>
+          <p class="additions-item-controls--counter">3</p>
+          <button class="additions-item-controls--plus additions-item-controls--opt">+</button>
+        </div>
+      </li>
+      <li class="additions-item">
+        <h5 class="additions-item--heading">Соевый соус</h5>
+        <img class="additions-item--img" src="../img/additions/additions-2.png" alt="Addition 2">
+        <div class="additions-item-controls">
+          <button class="additions-item-controls--minus additions-item-controls--opt">-</button>
+          <p class="additions-item-controls--counter">3</p>
+          <button class="additions-item-controls--plus additions-item-controls--opt">+</button>
+        </div>
+      </li>
+      <li class="additions-item">
+        <h5 class="additions-item--heading">Соевый соус</h5>
+        <img class="additions-item--img" src="../img/additions/additions-2.png" alt="Addition 3">
+        <div class="additions-item-controls">
+          <button class="additions-item-controls--minus additions-item-controls--opt">-</button>
+          <p class="additions-item-controls--counter">3</p>
+          <button class="additions-item-controls--plus additions-item-controls--opt">+</button>
+        </div>
+      </li>
+      <li class="additions-item">
+        <h5 class="additions-item--heading">Соевый соус</h5>
+        <img class="additions-item--img" src="../img/additions/additions-2.png" alt="Addition 4">
+        <div class="additions-item-controls">
+          <button class="additions-item-controls--minus additions-item-controls--opt">-</button>
+          <p class="additions-item-controls--counter">3</p>
+          <button class="additions-item-controls--plus additions-item-controls--opt">+</button>
+        </div>
+      </li>
+      <li class="additions-item">
+        <h5 class="additions-item--heading">Соевый соус</h5>
+        <img class="additions-item--img" src="../img/additions/additions-2.png" alt="Addition 5">
+        <div class="additions-item-controls">
+          <button class="additions-item-controls--minus additions-item-controls--opt">-</button>
+          <p class="additions-item-controls--counter">3</p>
+          <button class="additions-item-controls--plus additions-item-controls--opt">+</button>
+        </div>
+      </li>
+      <li class="additions-item">
+        <h5 class="additions-item--heading">Соевый соус</h5>
+        <img class="additions-item--img" src="../img/additions/additions-2.png" alt="Addition 6">
+        <div class="additions-item-controls">
+          <button class="additions-item-controls--minus additions-item-controls--opt">-</button>
+          <p class="additions-item-controls--counter">3</p>
+          <button class="additions-item-controls--plus additions-item-controls--opt">+</button>
+        </div>
+      </li>
+      <li class="additions-item">
+        <h5 class="additions-item--heading">Соевый соус</h5>
+        <img class="additions-item--img" src="../img/additions/additions-2.png" alt="Addition 7">
+        <div class="additions-item-controls">
+          <button class="additions-item-controls--minus additions-item-controls--opt">-</button>
+          <p class="additions-item-controls--counter">3</p>
+          <button class="additions-item-controls--plus additions-item-controls--opt">+</button>
+        </div>
+      </li>
+      <li class="additions-item">
+        <h5 class="additions-item--heading">Соевый соус</h5>
+        <img class="additions-item--img" src="../img/additions/additions-2.png" alt="Addition 8">
+        <div class="additions-item-controls">
+          <button class="additions-item-controls--minus additions-item-controls--opt">-</button>
+          <p class="additions-item-controls--counter">3</p>
+          <button class="additions-item-controls--plus additions-item-controls--opt">+</button>
+        </div>
+      </li>
+    </ul>
+    <div class="btn additions__btn">
+      <a href="#" class="btn--inner additions__btn--inner">добавить в корзину</a>
+    </div>
+  </div>
   <div class="modal hidden">
     <p class="modal__close">X</p>
     <div class="modal__order">
@@ -284,9 +376,10 @@
                 </div>
               </div>
               <div class="modal__card-col">
+
                 <div class="modal__card-options">
-                  <img src="../img/card/edit.svg" class="modal__card-options--edit" />
-                  <img src="../img/card/delete.svg" class="modal__card-options--delete" />
+                  <img src="../img/card/edit.svg" class="modal__card-options--edit" alt="Иконка редактирования" />
+                  <img src="../img/card/delete.svg" class="modal__card-options--delete" alt="Иконка удаления" />
                 </div>
                 <p class="modal__card--price">
                   <span class="modal__card--imp">727</span> &#8381;
@@ -309,8 +402,8 @@
               </div>
               <div class="modal__card-col">
                 <div class="modal__card-options">
-                  <img src="../img/card/edit.svg" class="modal__card-options--edit" />
-                  <img src="../img/card/delete.svg" class="modal__card-options--delete" />
+                  <img src="../img/card/edit.svg" class="modal__card-options--edit" alt="Иконка редактирования" />
+                  <img src="../img/card/delete.svg" class="modal__card-options--delete" alt="Иконка удаления" />
                 </div>
                 <p class="modal__card--price">
                   <span class="modal__card--imp">727</span> &#8381;
@@ -333,8 +426,8 @@
               </div>
               <div class="modal__card-col">
                 <div class="modal__card-options">
-                  <img src="../img/card/edit.svg" class="modal__card-options--edit" />
-                  <img src="../img/card/delete.svg" class="modal__card-options--delete" />
+                  <img src="../img/card/edit.svg" class="modal__card-options--edit" alt="Иконка редактирования" />
+                  <img src="../img/card/delete.svg" class="modal__card-options--delete" alt="Иконка удаления" />
                 </div>
                 <p class="modal__card--price">
                   <span class="modal__card--imp">727</span> &#8381;
@@ -357,8 +450,8 @@
               </div>
               <div class="modal__card-col">
                 <div class="modal__card-options">
-                  <img src="../img/card/edit.svg" class="modal__card-options--edit" />
-                  <img src="../img/card/delete.svg" class="modal__card-options--delete" />
+                  <img src="../img/card/edit.svg" class="modal__card-options--edit" alt="Иконка редактирования" />
+                  <img src="../img/card/delete.svg" class="modal__card-options--delete" alt="Иконка удаления" />
                 </div>
                 <p class="modal__card--price">
                   <span class="modal__card--imp">727</span> &#8381;
@@ -381,8 +474,8 @@
               </div>
               <div class="modal__card-col">
                 <div class="modal__card-options">
-                  <img src="../img/card/edit.svg" class="modal__card-options--edit" />
-                  <img src="../img/card/delete.svg" class="modal__card-options--delete" />
+                  <img src="../img/card/edit.svg" class="modal__card-options--edit" alt="Иконка редактирования" />
+                  <img src="../img/card/delete.svg" class="modal__card-options--delete" alt="Иконка удаления" />
                 </div>
                 <p class="modal__card--price">
                   <span class="modal__card--imp">727</span> &#8381;
@@ -405,8 +498,8 @@
               </div>
               <div class="modal__card-col">
                 <div class="modal__card-options">
-                  <img src="../img/card/edit.svg" class="modal__card-options--edit" />
-                  <img src="../img/card/delete.svg" class="modal__card-options--delete" />
+                  <img src="../img/card/edit.svg" class="modal__card-options--edit" alt="Иконка редактирования" />
+                  <img src="../img/card/delete.svg" class="modal__card-options--delete" alt="Иконка удаления" />
                 </div>
                 <p class="modal__card--price">
                   <span class="modal__card--imp">727</span> &#8381;
@@ -429,8 +522,8 @@
               </div>
               <div class="modal__card-col">
                 <div class="modal__card-options">
-                  <img src="../img/card/edit.svg" class="modal__card-options--edit" />
-                  <img src="../img/card/delete.svg" class="modal__card-options--delete" />
+                  <img src="../img/card/edit.svg" class="modal__card-options--edit" alt="Иконка редактирования" />
+                  <img src="../img/card/delete.svg" class="modal__card-options--delete" alt="Иконка удаления" />
                 </div>
                 <p class="modal__card--price">
                   <span class="modal__card--imp">727</span> &#8381;
@@ -453,8 +546,8 @@
               </div>
               <div class="modal__card-col">
                 <div class="modal__card-options">
-                  <img src="../img/card/edit.svg" class="modal__card-options--edit" />
-                  <img src="../img/card/delete.svg" class="modal__card-options--delete" />
+                  <img src="../img/card/edit.svg" class="modal__card-options--edit" alt="Иконка редактирования" />
+                  <img src="../img/card/delete.svg" class="modal__card-options--delete" alt="Иконка удаления" />
                 </div>
                 <p class="modal__card--price">
                   <span class="modal__card--imp">727</span> &#8381;
@@ -477,8 +570,8 @@
               </div>
               <div class="modal__card-col">
                 <div class="modal__card-options">
-                  <img src="../img/card/edit.svg" class="modal__card-options--edit" />
-                  <img src="../img/card/delete.svg" class="modal__card-options--delete" />
+                  <img src="../img/card/edit.svg" class="modal__card-options--edit" alt="Иконка редактирования" />
+                  <img src="../img/card/delete.svg" class="modal__card-options--delete" alt="Иконка удаления" />
                 </div>
                 <p class="modal__card--price">
                   <span class="modal__card--imp">727</span> &#8381;
@@ -501,8 +594,8 @@
               </div>
               <div class="modal__card-col">
                 <div class="modal__card-options">
-                  <img src="../img/card/edit.svg" class="modal__card-options--edit" />
-                  <img src="../img/card/delete.svg" class="modal__card-options--delete" />
+                  <img src="../img/card/edit.svg" class="modal__card-options--edit" alt="Иконка редактирования" />
+                  <img src="../img/card/delete.svg" class="modal__card-options--delete" alt="Иконка удаления" />
                 </div>
                 <p class="modal__card--price">
                   <span class="modal__card--imp">727</span> &#8381;
@@ -525,8 +618,8 @@
               </div>
               <div class="modal__card-col">
                 <div class="modal__card-options">
-                  <img src="../img/card/edit.svg" class="modal__card-options--edit" />
-                  <img src="../img/card/delete.svg" class="modal__card-options--delete" />
+                  <img src="../img/card/edit.svg" class="modal__card-options--edit" alt="Иконка редактирования" />
+                  <img src="../img/card/delete.svg" class="modal__card-options--delete" alt="Иконка удаления" />
                 </div>
                 <p class="modal__card--price">
                   <span class="modal__card--imp">727</span> &#8381;
@@ -549,8 +642,8 @@
               </div>
               <div class="modal__card-col">
                 <div class="modal__card-options">
-                  <img src="../img/card/edit.svg" class="modal__card-options--edit" />
-                  <img src="../img/card/delete.svg" class="modal__card-options--delete" />
+                  <img src="../img/card/edit.svg" class="modal__card-options--edit" alt="Иконка редактирования" />
+                  <img src="../img/card/delete.svg" class="modal__card-options--delete" alt="Иконка удаления" />
                 </div>
                 <p class="modal__card--price">
                   <span class="modal__card--imp">727</span> &#8381;
@@ -578,7 +671,7 @@
             <input type="text" class="modal__delivery--note hidden" placeholder="примечание" />
             <div class="modal__delivery-total-box">
               <p class="modal__delivery-total--name">Итого:</p>
-              <p class="modal__delivery--total"><span class="modal__delivery--imp">1337</span> &#8381</p>
+              <p class="modal__delivery--total"><span class="modal__delivery--imp">1337</span> &#8381;</p>
             </div>
             <button class="btn modal__delivery-btn-box">
               <a href="#" class="btn--inner modal__delivery-btn--inner">перейти к оплате</a>

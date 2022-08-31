@@ -191,8 +191,8 @@ document.body.addEventListener("click", (e) => {
 
 btnMenu?.addEventListener("click", showMenu);
 
-const showAdditions = () => wndAdditions.classList.remove("hidden");
-const hideAdditions = () => wndAdditions.classList.add("hidden");
+const showAdditions = () => wndAdditions?.classList.remove("hidden");
+const hideAdditions = () => wndAdditions?.classList.add("hidden");
 
 btnModalAdditions.forEach((el) => el.addEventListener("click", showAdditions));
 

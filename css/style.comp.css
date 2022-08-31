@@ -666,7 +666,7 @@ body {
   transform: translate(-50%, -50%);
   position: fixed;
   width: 60%;
-  z-index: 21;
+  z-index: 67;
   background-color: #131313;
   box-shadow: 0 0 2rem #ff8f3e;
   border-radius: 2rem;
@@ -996,6 +996,7 @@ body {
     padding-top: 25vh; }
     @media only screen and (max-width: 900px) {
       .section__latest-menu {
+        padding-top: 15vh;
         font-size: 2rem; } }
   @media only screen and (max-width: 800px) {
     .section__latest {
