@@ -152,7 +152,8 @@
   }
   &__right {
     border-radius: $border-radius;
-    background-image: url("../../img/locations/map.jpg");
+    background-image: url("../img/locations/map.jpg");
+    background-size: cover;
   }
   &__item {
     display: grid;
@@ -265,13 +266,13 @@
         }
       }
       &:nth-child(2) {
-        background-image: url("../../img/about/about-1.jpg");
+        background-image: url("../img/about/about-1.jpg");
         @media only screen and (max-width: 700px) {
           order: 1;
         }
       }
       &:nth-child(3) {
-        background-image: url("../../img/about/about-2.jpg");
+        background-image: url("../img/about/about-2.jpg");
         @media only screen and (max-width: 700px) {
           order: 3;
         }
